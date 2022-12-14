@@ -4,9 +4,9 @@ import "quill/dist/quill.snow.css";
 import { BsFileEarmarkPlus, BsFileCheck } from "react-icons/bs";
 const Texteditor = ({ handleclick }) => {
   const modules = {
-    toolbar: [["bold", "italic", "underline", "strike", "align", "list"]],
+    toolbar: [["bold", "italic", "underline", "strike", "align", "list","Image"]],
   };
-  const { quill, quillRef } = useQuill({ modules });
+  const { quill, quillRef } = useQuill();
   const [value, setValue] = useState("");
   const [title, settitle] = useState("");
   const [desc, setdesc] = useState("");
@@ -47,7 +47,7 @@ const Texteditor = ({ handleclick }) => {
           onChange={(e) => setdesc(e.target.value)}
         />
       </div>
-      <div style={{ width: 500, height: 300 }}>
+      <div style={{ width: 500, height: 300, }}>
         <div ref={quillRef} />
         <div className="publish_button" >
           <BsFileCheck onClick={() => handleclick(payload)} />
