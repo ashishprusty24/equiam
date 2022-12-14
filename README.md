@@ -12,7 +12,7 @@
 <p> get data by id = http://localhost:8080/blog/:id </p>
 
 
-#Client Installation
+# Client Installation
 <p> install all dependancy using npm install  <p>
 <p> start application by npm start <p>
 
